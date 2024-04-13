@@ -1,4 +1,5 @@
 import settings
+from data import UserData
 from locators import BurgerLocators
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -9,9 +10,9 @@ class TestPersonalAccount:
         enter_button = driver.find_element(*BurgerLocators.ENTER_BUTTON_MAIN)
         enter_button.click()
         login_field_email = driver.find_element(*BurgerLocators.REGISTRATION_FIELD_EMAIL)
-        login_field_email.send_keys("bukatkin@yandex.ru")
+        login_field_email.send_keys(UserData.USER_EMAIL)
         login_field_password = driver.find_element(*BurgerLocators.REGISTRATION_FIELD_PASSWORD)
-        login_field_password.send_keys("123456")
+        login_field_password.send_keys(UserData.USER_PASSWORD)
         driver.find_element(*BurgerLocators.LOGIN_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(BurgerLocators.ORDER_BUTTON))
         driver.find_element(*BurgerLocators.ACCOUNT_BUTTON).click()
@@ -22,9 +23,9 @@ class TestPersonalAccount:
         enter_button = driver.find_element(*BurgerLocators.ENTER_BUTTON_MAIN)
         enter_button.click()
         login_field_email = driver.find_element(*BurgerLocators.REGISTRATION_FIELD_EMAIL)
-        login_field_email.send_keys("bukatkin@yandex.ru")
+        login_field_email.send_keys(UserData.USER_EMAIL)
         login_field_password = driver.find_element(*BurgerLocators.REGISTRATION_FIELD_PASSWORD)
-        login_field_password.send_keys("123456")
+        login_field_password.send_keys(UserData.USER_PASSWORD)
         driver.find_element(*BurgerLocators.LOGIN_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(BurgerLocators.ORDER_BUTTON))
         driver.find_element(*BurgerLocators.ACCOUNT_BUTTON).click()
