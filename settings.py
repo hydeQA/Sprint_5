@@ -1,9 +1,9 @@
 
 URL = 'https://stellarburgers.nomoreparties.site/'
 
-URL_LOGIN = 'https://stellarburgers.nomoreparties.site/login'
+URL_LOGIN = URL + 'login'
 
-URL_REGISTER = 'https://stellarburgers.nomoreparties.site/register'
+URL_REGISTER = URL + 'register'
 
-URL_PROFILE = 'https://stellarburgers.nomoreparties.site/account/profile'
+URL_PROFILE = URL + 'account/profile'
 
