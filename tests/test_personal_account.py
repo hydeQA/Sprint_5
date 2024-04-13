@@ -12,10 +12,10 @@ class TestPersonalAccount:
         login_field_email.send_keys("bukatkin@yandex.ru")
         login_field_password = driver.find_element(*BurgerLocators.REGISTRATION_FIELD_PASSWORD)
         login_field_password.send_keys("123456")
-        driver.find_element(By.XPATH, "//button[text() = 'Войти']").click()
+        driver.find_element(*BurgerLocators.LOGIN_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(BurgerLocators.ORDER_BUTTON))
         driver.find_element(*BurgerLocators.ACCOUNT_BUTTON).click()
-        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((By.XPATH, "//p[text() = 'В этом разделе вы можете изменить свои персональные данные']")))
+        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(BurgerLocators.TEXT_DESCRIPTION))
         assert driver.current_url == settings.URL_PROFILE
         driver.quit()
 
@@ -26,10 +26,10 @@ class TestPersonalAccount:
         login_field_email.send_keys("bukatkin@yandex.ru")
         login_field_password = driver.find_element(*BurgerLocators.REGISTRATION_FIELD_PASSWORD)
         login_field_password.send_keys("123456")
-        driver.find_element(By.XPATH, "//button[text() = 'Войти']").click()
+        driver.find_element(*BurgerLocators.LOGIN_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(BurgerLocators.ORDER_BUTTON))
         driver.find_element(*BurgerLocators.ACCOUNT_BUTTON).click()
-        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((By.XPATH, "//p[text() = 'В этом разделе вы можете изменить свои персональные данные']")))
+        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(BurgerLocators.TEXT_DESCRIPTION))
         driver.find_element(*BurgerLocators.EXIT_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(BurgerLocators.REGISTRATION_TITLE))
         assert driver.current_url == settings.URL_LOGIN

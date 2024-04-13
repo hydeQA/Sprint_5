@@ -37,7 +37,7 @@ class TestBurgerRegistration:
         registration_field_password = driver.find_element(*BurgerLocators.REGISTRATION_FIELD_PASSWORD)
         registration_field_password.send_keys("12345")
         driver.find_element(*BurgerLocators.REGISTRATION_BUTTON).click()
-        assert driver.find_element(By.XPATH, "//p[text() = 'Некорректный пароль']").is_displayed(), "Error. A password less than 6 characters long is accepted."
+        assert driver.find_element(*BurgerLocators.TEXT_ERROR).is_displayed(), "Error. A password less than 6 characters long is accepted."
         driver.quit()
 
     def test_empty_password_appear_error(self, driver):
@@ -79,5 +79,5 @@ class TestBurgerRegistration:
         registration_field_password.send_keys("123456")
         driver.find_element(*BurgerLocators.REGISTRATION_BUTTON).click()
         time.sleep(3)
-        assert driver.find_element(By.XPATH, "//p[text() = 'Такой пользователь уже существует']").is_displayed(), "Error. Email that does not match the mask is accepted."
+        assert driver.find_element(*BurgerLocators.TEXT_ERROR_REGISTRATION).is_displayed(), "Error. Email that does not match the mask is accepted."
         driver.quit()
