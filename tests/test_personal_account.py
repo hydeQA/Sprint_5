@@ -17,7 +17,6 @@ class TestPersonalAccount:
         driver.find_element(*BurgerLocators.ACCOUNT_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(BurgerLocators.TEXT_DESCRIPTION))
         assert driver.current_url == settings.URL_PROFILE
-        driver.quit()
 
     def test_exit_from_account_success(self, driver):
         enter_button = driver.find_element(*BurgerLocators.ENTER_BUTTON_MAIN)
@@ -33,4 +32,3 @@ class TestPersonalAccount:
         driver.find_element(*BurgerLocators.EXIT_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(BurgerLocators.REGISTRATION_TITLE))
         assert driver.current_url == settings.URL_LOGIN
-        driver.quit()

@@ -14,7 +14,6 @@ class TestBurgerLogin:
         driver.find_element(*BurgerLocators.LOGIN_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(BurgerLocators.ORDER_BUTTON))
         assert driver.find_element(*BurgerLocators.TITLE_CONSTRUCTOR).is_displayed(), "Title don't exist"
-        driver.quit()
 
     def test_login_in_personal_account_success(self, driver):
         account_button = driver.find_element(*BurgerLocators.ACCOUNT_BUTTON)
@@ -27,7 +26,6 @@ class TestBurgerLogin:
         driver.find_element(*BurgerLocators.LOGIN_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(BurgerLocators.ORDER_BUTTON))
         assert driver.find_element(*BurgerLocators.TITLE_CONSTRUCTOR).is_displayed(), "Title don't exist"
-        driver.quit()
 
     def test_login_button_in_registration_form_success(self, driver):
         enter_button = driver.find_element(*BurgerLocators.ENTER_BUTTON_MAIN)
@@ -42,7 +40,6 @@ class TestBurgerLogin:
         driver.find_element(*BurgerLocators.LOGIN_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(BurgerLocators.ORDER_BUTTON))
         assert driver.find_element(*BurgerLocators.TITLE_CONSTRUCTOR).is_displayed(), "Title don't exist"
-        driver.quit()
 
     def test_login_button_form_recovery_form_success(self, driver):
         enter_button = driver.find_element(*BurgerLocators.ENTER_BUTTON_MAIN)
@@ -58,4 +55,3 @@ class TestBurgerLogin:
         driver.find_element(*BurgerLocators.LOGIN_BUTTON).click()
         WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(BurgerLocators.ORDER_BUTTON))
         assert driver.find_element(*BurgerLocators.TITLE_CONSTRUCTOR).is_displayed(), "Title don't exist"
-        driver.quit()

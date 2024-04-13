@@ -17,21 +17,21 @@ class BurgerLocators:
 
     ORDER_BUTTON = (By.XPATH, "//button[text() = 'Оформить заказ']")    # Кнопка "Оформить" заказ на главной у авторизованного пользователя
 
-    BUTTON_CONSTRUCTOR = (By.XPATH, "//p[text() = 'Конструктор']")
-    BUTTON_FILLING = (By.XPATH, "//span[text() = 'Начинки']")
-    BUTTON_SAUCE = (By.XPATH, "//span[text() = 'Соусы']")
-    BUTTON_BUNS = (By.XPATH, "//span[text() = 'Булки']")
+    BUTTON_CONSTRUCTOR = (By.XPATH, "//p[text() = 'Конструктор']")      # Кнопка Кноструктор в шапке
+    BUTTON_FILLING = (By.XPATH, "//span[text() = 'Начинки']")           # Кнокпа Начинки для перемотки меню
+    BUTTON_SAUCE = (By.XPATH, "//span[text() = 'Соусы']")               # Кнопка Соусы для перемотки меню
+    BUTTON_BUNS = (By.XPATH, "//span[text() = 'Булки']")                # Кнопка Булки для перемотки меню
 
     BUTTON_ENTER = (By.XPATH, "//a[@class = 'Auth_link__1fOlj']")   # Кнопка Войти на экране регистраци
     BUTTON_ENTER_RECOVER = (By.XPATH, "//a[text() = 'Войти']")      # Кнопка войти на экране Восстановления пароля
 
-    TITLE_CONSTRUCTOR = (By.XPATH, "//h1[text() = 'Соберите бургер']")
-    TITLE_FILLING = (By.XPATH, "//h2[text() = 'Начинки']")
-    TITLE_SAUCE = (By.XPATH, "//h2[text() = 'Соусы']")
-    TITLE_BUNS = (By.XPATH, "//h2[text() = 'Булки']")
-    TITLE_RECOVER = (By.XPATH, "//h2[text() = 'Восстановление пароля']")
+    TITLE_CONSTRUCTOR = (By.XPATH, "//h1[text() = 'Соберите бургер']")  # Заголовок "Соберите бургер" на главной странице
+    TITLE_FILLING = (By.XPATH, "//h2[text() = 'Начинки']")              # Заголовок "Начинки" в меню
+    TITLE_SAUCE = (By.XPATH, "//h2[text() = 'Соусы']")                  # Заголовок "Соусы" в меню
+    TITLE_BUNS = (By.XPATH, "//h2[text() = 'Булки']")                   # Заголовок "Булки" в меню
+    TITLE_RECOVER = (By.XPATH, "//h2[text() = 'Восстановление пароля']")    # Заголовок "Восстановление пароля"
 
-    LOGO_BURGERS = (By.XPATH, "//*[@id='root']/div/header/nav/div/a")
-    TEXT_DESCRIPTION = (By.XPATH, "//p[text() = 'В этом разделе вы можете изменить свои персональные данные']")
+    LOGO_BURGERS = (By.XPATH, "//*[@id='root']/div/header/nav/div/a")   # Логотип сайта Бургер
+    TEXT_DESCRIPTION = (By.XPATH, "//p[text() = 'В этом разделе вы можете изменить свои персональные данные']") # Текст описания в Личном кабинете
     TEXT_ERROR = (By.XPATH, "//p[text() = 'Некорректный пароль']")  # Сообщение об ошибке ввода пароля
     TEXT_ERROR_REGISTRATION = (By.XPATH, "//p[text() = 'Такой пользователь уже существует']")   # Сообщение об ошибке при регистрации
