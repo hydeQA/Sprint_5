@@ -4,7 +4,7 @@ import settings
 from locators import BurgerLocators
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
-from data import user_email_generator
+from helpers import user_email_generator
 from selenium.webdriver.common.by import By
 
 
