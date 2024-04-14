@@ -1,5 +1,3 @@
-import time
-
 from data import UserData
 import settings
 from locators import BurgerLocators
@@ -74,5 +72,5 @@ class TestBurgerRegistration:
         registration_field_password = driver.find_element(*BurgerLocators.REGISTRATION_FIELD_PASSWORD)
         registration_field_password.send_keys(UserData.USER_PASSWORD)
         driver.find_element(*BurgerLocators.REGISTRATION_BUTTON).click()
-        time.sleep(3)
+        WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(BurgerLocators.TEXT_ERROR_REGISTRATION))
         assert driver.find_element(*BurgerLocators.TEXT_ERROR_REGISTRATION).is_displayed(), "Error. Email that does not match the mask is accepted."
